@@ -1,0 +1,16 @@
+<div class="container" *ngIf="flag">
+
+    <h3>Upload Excel Data Here</h3>
+    <br>
+    <div class="panel">
+        <input (change)="selectFile($event)" type="file" />
+        <div class="btn-class">
+            <button (click)="uploadFile()" class="btn btn-primary">Upload</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="!flag">
+    <h1>Please Wait....</h1>
+    <h2>File is uploading</h2>
+</div>
